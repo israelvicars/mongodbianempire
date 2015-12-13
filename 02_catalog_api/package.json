@@ -1,0 +1,18 @@
+{
+  "name": "product_catalog_api",
+  "version": "1.0.0",
+  "description": "API for a product catalog, utilizing express and mongo.",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser":"*",
+    "express": "^4.13.3",
+    "mongojs": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Israel Vicars <israelvicars@gmail.com",
+  "license": "ISC"
+}
