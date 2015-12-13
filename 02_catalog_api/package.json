@@ -2,15 +2,19 @@
   "name": "product_catalog_api",
   "version": "1.0.0",
   "description": "API for a product catalog, utilizing express and mongo.",
+  "repository":"https://github.com/israelvicars/mongodbianempire",
   "main": "index.js",
   "dependencies": {
     "body-parser":"*",
     "express": "^4.13.3",
     "mongojs": "*"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "Israel Vicars <israelvicars@gmail.com",
