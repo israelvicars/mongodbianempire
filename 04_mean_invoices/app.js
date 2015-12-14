@@ -13,10 +13,6 @@ var db = mongoose.connection
 app.use(express.static(__dirname+'/client'))
 app.use(bodyParser.json())
 
-app.get('/', function(req, res){
-	res.send('¡Hola mundo!')
-})
-
 app.use('/api/customers', customers)
 app.use('/api/invoices', invoices)
 
