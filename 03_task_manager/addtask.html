@@ -8,14 +8,14 @@
 		<script src="js/bootstrap.js"></script>
 		<script src="js/main.js"></script>
 	</head>
-	<body>
+	<body onload="getCategoryOptions()">
 		<div class="container">
 			<div class="header clearfix">
 				<nav>
 					<ul class="nav nav-pills pull-right">
 						<li role="presentation"><a href="index.html">Home</a></li>
-						<li role="presentation"><a href="addtask.html">Add Task</a></li>
-						<li role="presentation" class="active"><a href="categories.html">Manage Categories</a></li>
+						<li role="presentation" class="active"><a href="addtask.html">Add Task</a></li>
+						<li role="presentation"><a href="categories.html">Manage Categories</a></li>
 					</ul>
 				</nav>
 				<h3 class="text-muted">Task Manager</h3>
@@ -23,11 +23,28 @@
 
 			<div class="row marketing">
 				<div class="col-lg-12">
-					<h4>Add Categories</h4>
-					<form id="add_category">
+					<h4>Add Task</h4>
+					<form id="add_task">
 						<div class="form-group">
-							<label>Category Name</label>
-							<input type="text" name="category_name" class="form-control" id="category_name" placeholder="Category Name">
+							<label>Task Name</label>
+							<input type="text" name="task_name" class="form-control" id="task_name" placeholder="Task Name">
+						</div>
+						<div class="form-group">
+							<label>Category</label>
+							<select name="category" class="form-control" id="category">
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Due Date</label>
+							<input type="date" name="due_date" class="form-control" id="due_date" placeholder="mm/dd/yyyy">
+						</div>
+						<div class="form-group">
+							<label>Priority</label>
+							<select name="priority" class="form-control" id="priority">
+								<option value="urgent">Urgent</option>
+								<option value="short">Short term</option>
+								<option value="long">Long term</option>
+							</select>
 						</div>
 						<button type="submit" class="btn btn-primary">Submit</button>
 					</form>
