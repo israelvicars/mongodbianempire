@@ -1,0 +1,29 @@
+{
+  "name": "mean_invoices",
+  "version": "1.0.0",
+  "description": "Invoices and client management project using MEAN stack",
+	"main": "app.js",
+	"dependencies": {
+		"body-parser":"^1.14.1",
+		"express": "^4.13.3",
+		"mongoose": "^4.3.1"
+	},
+	"devDependencies": {
+		"nodemon": "^1.8.1"
+	},
+	"scripts": {
+		"start": "node app.js",
+		"dev": "nodemon app.js"
+	},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/israelvicars/mongodbianempire.git"
+  },
+  "keywords": [],
+  "author": "Israel Vicars <israelvicars@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/israelvicars/mongodbianempire/issues"
+  },
+  "homepage": "https://github.com/israelvicars/mongodbianempire#readme"
+}
