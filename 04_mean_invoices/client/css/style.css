@@ -7,6 +7,9 @@ body {
   padding-top: 50px;
 }
 
+.img-small{
+  max-height: 60px;
+}
 
 /*
  * Global add-ons

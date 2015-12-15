@@ -29,12 +29,12 @@ var Invoice = module.exports = mongoose.model('Invoice', invoiceSchema)
 
 // GET Invoices
 module.exports.getInvoices = function(callback, limit){
-	Invoice.find(callback).limit(limit).sort([['createdAt', 'descending']])
+	Invoice.find(callback).limit(limit).populate('customer').sort([['createdAt', 'descending']])
 }
 
 // GET Invoice by ID
 module.exports.getInvoiceById = function(id, callback){
-	Invoice.findById(id, callback)
+	Invoice.findById(id, callback).populate('customer')
 }
 
 // ADD Invoice
@@ -70,10 +70,11 @@ module.exports.removeInvoice = function(id, callback){
 	Invoice.remove(query, callback)
 }
 
-
-
-
-
+// GET Invoices of a Customer
+module.exports.getCustomerInvoices = function(customer_id, callback, limit){
+	var query = {customer: customer_id}
+	Invoice.find(query, callback).limit(limit).populate('customer').sort([['createdAt', 'ascending']])
+}
 
 
 //

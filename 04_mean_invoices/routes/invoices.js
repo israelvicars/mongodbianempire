@@ -64,4 +64,16 @@ router.delete('/:id', function(req, res){
 	})
 })
 
+// GET Invoices for a single customer
+router.get('/customers/:customer_id', function(req, res){
+	var customer_id = req.params.customer_id
+	Invoice.getCustomerInvoices(customer_id, function(err, invoices){
+		if(err){
+			res.send(err)
+		} else {
+			res.json(invoices)
+		}
+	})
+})
+
 module.exports = router

@@ -15,3 +15,10 @@ Front-end: AngularJS.
 - Displaying customers and invoices
 - Populating customer and invoice collections
 - Editing, removing customers and invoices
+
+### Refactoring Ideas
+
+- Service(s) for customer, invoice selection across views
+- Initialize more data in the controller, not through the template (ng-init)
+- Date selection, not date as text
+- Initialize created date in controller

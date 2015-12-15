@@ -1,0 +1,31 @@
+<h2 class="sub-header">Invoices</h2>
+<div class="table-responsive" ng-init="getInvoices()">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Customer</th>
+				<th>Service</th>
+				<th>Price</th>
+				<th>Stage</th>
+				<th>Created</th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="invoice in invoices track by $index">
+				<td>{{$index + 1}}</td>
+				<td>{{invoice.customer.company}}</td>
+				<td>{{invoice.service}}</td>
+				<td>{{invoice.price}}</td>
+				<td>{{invoice.stage}}</td>
+				<td>{{invoice.createdAt | date : 'MM/dd/yyyy'}}
+				<td><a href="#/invoices/details/{{invoice._id}}" class="btn btn-primary">Details</a></td>
+				<td><a href="#/invoices/edit/{{invoice._id}}" class="btn btn-default">Edit</a></td>
+				<td><a id="deleteInvoice" ng-click="deleteInvoice(invoice._id)" class="btn btn-danger">Delete</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
